@@ -8,6 +8,12 @@ package week9.bikeapp;
  *
  * @author ryanwhite
  */
-public class ElectricBike {
-    
+public class ElectricBike extends Bike{
+   public ElectricBike(int bikeNo, String stationName){
+       super(bikeNo,stationName,2.5);
+   }
+   @Override
+   public String getBikeType(){
+       return "Electric Bike";
+   }
 }

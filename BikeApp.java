@@ -13,7 +13,7 @@ public class BikeApp {
     public static void main(String[] args) {
        UserQueueInterface uq=new UserQueue();
        BikeAppGUI bikeapp=new BikeAppGUI();
-       //bikeapp.setVisible(true);
+       bikeapp.setVisible(true);
        
        uq.enqueue("Jack, #12467, Electric Bike, 3 Arena");
        uq.enqueue("User 2");

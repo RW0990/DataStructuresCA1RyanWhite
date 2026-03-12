@@ -9,10 +9,10 @@ import java.util.*;
  * @author ryanwhite
  */
 public class ReturnBikeStack implements RentBikeStackInterface {
-    private ArrayList <String> bikeStack;
+    private ArrayList <Bike> bikeStack;
     
     public ReturnBikeStack(){
-        bikeStack = new ArrayList<String>();
+        bikeStack = new ArrayList<Bike>();
     }
     public int size(){
         return bikeStack.size();
@@ -31,7 +31,7 @@ public class ReturnBikeStack implements RentBikeStackInterface {
         }
     }
     public void push(Object newBike){
-        bikeStack.add(0,(String) newBike);
+        bikeStack.add(0,(Bike) newBike);
     }
     public void emptyStack(){
         while(!bikeStack.isEmpty()){
@@ -46,7 +46,7 @@ public class ReturnBikeStack implements RentBikeStackInterface {
             word=word.concat("No Bikes available");
         }else{
             for(i=0; i<bikeStack.size(); i++){
-                word=word.concat(bikeStack.get(i));
+                word=word.concat(bikeStack.toString());
                 word=word.concat(";");
             }
         }
