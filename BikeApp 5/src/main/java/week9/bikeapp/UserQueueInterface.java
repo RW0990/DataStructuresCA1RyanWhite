@@ -8,12 +8,10 @@ package week9.bikeapp;
  *
  * @author ryanwhite
  */
-public interface RentBikeStackInterface {
+public interface UserQueueInterface {
     public boolean isEmpty();
-    public boolean isFull();
-    public void push(Bike newBike);
-    public Object pop();
     public int size();
-    public void emptyStack();
-    public String displayStack();
+    public Object firstElement();
+    public void enqueue(Object newUser);
+    public Object dequeue();
 }

@@ -8,12 +8,11 @@ package week9.bikeapp;
  *
  * @author ryanwhite
  */
-public interface RentBikeStackInterface {
+public interface SingleLinkedListInterface {
     public boolean isEmpty();
-    public boolean isFull();
-    public void push(Bike newBike);
-    public Object pop();
     public int size();
-    public void emptyStack();
-    public String displayStack();
+    public Object get(int index);
+    public void remove(int index);
+    public void add(int index,Object element);
+    public void printList();
 }
