@@ -8,14 +8,16 @@ package week9.bikeapp;
  *
  * @author ryanwhite
  */
-public class Station{
+public class Station extends StationSLL{
     private int stationNo;
     private String stationName;
+    private String location;
     private int bikeAmnt;
     
-    public Station(int stationNo, String stationName, int bikeAmnt){
+    public Station(){
         stationNo=stationNo;
         stationName=stationName;
+        location=location;
         bikeAmnt=bikeAmnt;
     }
 
@@ -27,12 +29,20 @@ public class Station{
         return stationNo;
     }
 
+    public String getLocation() {
+        return location;
+    }
+
     public int getBikeAmnt() {
         return bikeAmnt;
     }
 
     public void setStationNo(int stationNo) {
         this.stationNo = stationNo;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
     }
 
     public void setBikeAmnt(int bikeAmnt) {
@@ -44,16 +54,14 @@ public class Station{
     }
     
     public void addBike(){
-        bikeAmnt++;
+        
     }
     public void removeBike(){
-        bikeAmnt--;
     }
     
     public String getStationInfo(){
-        return "Station No:"+stationNo+"\nStation Name: "+stationName+"\nAmount of Bikes: "+bikeAmnt;
+        return "";
     }
-    @Override
     public String toString(){
         return getStationInfo();
     }

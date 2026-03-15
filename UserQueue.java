@@ -14,7 +14,7 @@ public class UserQueue implements UserQueueInterface {
     public UserQueue(){
         userQueue = new ArrayList<String>();
     }
-
+    
     public boolean isEmpty(){
             return userQueue.isEmpty();
     }

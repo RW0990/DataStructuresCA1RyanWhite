@@ -53,7 +53,7 @@ public class StationSLL implements SingleLinkedListInterface {
     }
     public Object get(int index){
         setCurrent(index);
-        return curr.getElement();
+        return curr;
     }
     public void remove(int index){
         if(index==1){

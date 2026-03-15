@@ -8,24 +8,24 @@ package week9.bikeapp;
  *
  * @author ryanwhite
  */
-public abstract class Bike{
+public class Bike{
     private int bikeNo;
     private boolean isAvailable;
     private String stationName;
     private double pricePerKm;
     
-    public Bike(int bikeNo,String stationName,double pricePerKm){
-        this.bikeNo=bikeNo;
-        this.isAvailable=true;
-        this.stationName=stationName;
-        this.pricePerKm=pricePerKm;
+    public Bike(){
+        bikeNo=bikeNo;
+        isAvailable=true;
+        stationName=stationName;
+        pricePerKm=pricePerKm;
     }
 
     public int getBikeNo() {
         return bikeNo;
     }
 
-    public boolean isAvailable() {
+    public boolean isIsAvailable() {
         return isAvailable;
     }
 
@@ -56,18 +56,15 @@ public abstract class Bike{
     public void startJourney(){
         isAvailable=false;
     }
-    public void endJourney(String newStationName){
+    public void endJourney(){
         isAvailable=true;
-        stationName = newStationName;
     }
-    
     public double calCost(double distance){
         return distance * pricePerKm;
     }
-    public abstract String getBikeType();
     
     public String getDetails(){
-        return "Bike No: "+bikeNo+"\nBike Type: "+getBikeType()+"\nAvailable: "+isAvailable+"\nAt station: "+stationName+"\n"+pricePerKm+" per KM.";
+        return "Bike No: "+bikeNo+"\n"+"Available: "+isAvailable+"\n"+"At station: "+stationName+"\n"+pricePerKm+" per KM.";
     }
     @Override
     public String toString(){
